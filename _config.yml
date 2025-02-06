@@ -1,11 +1,11 @@
-title: Nighthawk Pages 
-description: "Class of 2025"
-owner_name: John Mortensen
-github_username: nighthawkcoders
-github_repo: "portfolio_2025" 
-baseurl: "/portfolio_2025"
+title: The Refuge 
+description: "The Refuge: Empowering Lives and Bridging Communities."
+owner_name: Armaghan Zarak
+github_username: Armaghan-Z
+github_repo: "refuge" 
+baseurl: "/refuge"
 future: true
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
 minima:
   skin: dark
   social_links:
@@ -15,12 +15,13 @@ minima:
 # remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
 # remote_theme: pages-themes/minimal@v0.2.0
-# remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: pages-themes/cayman@v0.2.0
 # remote_theme: pages-themes/time-machine@v0.2.0
 plugins:
   - jekyll-remote-theme
 header_pages:
-  - navigation/kasm.md
-  - navigation/blog.md
-  - navigation/search.md
-  - navigation/logintoolkit.md
+  - navigation/resources.md
+  - employment.md
+  - community.md
+  - about.md
+  - contact.md
