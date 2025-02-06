@@ -1,27 +1,47 @@
-title: The Refuge 
-description: "The Refuge: Empowering Lives and Bridging Communities."
+title: The Refuge
+description: "The Refuge: Empowering Lives and Bridging Communities"
 owner_name: Armaghan Zarak
 github_username: Armaghan-Z
-github_repo: "refuge" 
 baseurl: "/refuge"
-future: true
-# remote_theme: jekyll/minima
-minima:
-  skin: dark
-  social_links:
-    - { platform: github, user_url: "https://github.com/nighthawkcoders"}
-    - { platform: x, user_url: "https://x.com/NighthawkCoding/" }
-    - { platform: youtube, user_url: "https://www.youtube.com/@nighthawkcodingsociety2868" } 
-# remote_theme: pages-themes/midnight@v0.2.0
-# remote_theme: pages-themes/dinky@v0.2.0
-# remote_theme: pages-themes/minimal@v0.2.0
-remote_theme: pages-themes/cayman@v0.2.0
-# remote_theme: pages-themes/time-machine@v0.2.0
-plugins:
-  - jekyll-remote-theme
+url: "https://armaghan-z.github.io"
+google_analytics:
+
+# Theme
+theme: jekyll-theme-cayman
+
+# Navigation
 header_pages:
   - navigation/resources.md
   - employment.md
   - community.md
   - about.md
   - contact.md
+
+# Build settings
+markdown: kramdown
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+navigation:
+  - title: Home
+    url: /
+  - title: Resources
+    url: /navigation/resources
+  - title: Community
+    url: /navigation/community
+  - title: Employment
+    url: /navigation/employment
+  - title: About
+    url: /navigation/about
+  - title: Contact
+    url: /navigation/contact
