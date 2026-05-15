@@ -6,16 +6,13 @@ baseurl: "/refuge"
 url: "https://armaghan-z.github.io"
 google_analytics:
 
-# Theme
-theme: jekyll-theme-cayman
-
 # Navigation
 header_pages:
   - navigation/resources.md
-  - employment.md
-  - community.md
-  - about.md
-  - contact.md
+  - navigation/employment.md
+  - navigation/community.md
+  - navigation/about.md
+  - navigation/contact.md
 
 # Build settings
 markdown: kramdown
