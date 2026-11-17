@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — The Refuge</title>
+  <meta name="description" content="Reach out to The Refuge for help finding resources, reporting outdated information, or getting involved.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<div class="emergency-banner" id="emergency-banner">
+  <div class="container">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <span>24/7 Immigration Emergency Support — Call <a href="tel:18003755283">1-800-375-5283</a> (USCIS Contact Center)</span>
+  </div>
+  <button class="emergency-banner__dismiss" id="banner-dismiss" aria-label="Dismiss alert">✕</button>
+</div>
+
+<header class="site-header" id="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <span class="brand__icon" aria-hidden="true">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </span>
+        The Refuge<span class="dot">.</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="employment.html">Employment</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav__cta btn btn--primary btn--sm">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Get in <span class="hl">touch.</span></h1>
+      <p class="lead">Need help finding a resource? Have feedback? Want to get involved? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Layout -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Form -->
+        <div class="form-card reveal">
+          <h2>Send a message</h2>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First Name <span class="req" aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="first-name" name="first-name" required autocomplete="given-name" placeholder="Your first name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last Name</label>
+                <input class="form-input" type="text" id="last-name" name="last-name" autocomplete="family-name" placeholder="Your last name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address <span class="req" aria-hidden="true">*</span></label>
+              <input class="form-input" type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="topic">Topic <span class="req" aria-hidden="true">*</span></label>
+              <select class="form-select" id="topic" name="topic" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="general">General Information</option>
+                <option value="resources">Finding Resources</option>
+                <option value="employment">Employment Help</option>
+                <option value="housing">Housing Assistance</option>
+                <option value="legal">Legal Questions</option>
+                <option value="urgent">Urgent Assistance</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="feedback">Site Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="language">Preferred Language</label>
+              <select class="form-select" id="language" name="language">
+                <option value="english">English</option>
+                <option value="arabic">العربية (Arabic)</option>
+                <option value="spanish">Español (Spanish)</option>
+                <option value="french">Français (French)</option>
+                <option value="dari">دری (Dari)</option>
+                <option value="pashto">پښتو (Pashto)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea class="form-textarea" id="message" name="message" required rows="5" placeholder="Describe your question or how we can help…"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-method">How should we contact you back?</label>
+              <select class="form-select" id="contact-method" name="contact-method">
+                <option value="email">By email</option>
+                <option value="phone">By phone</option>
+                <option value="either">Either is fine</option>
+              </select>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem">
+                Send Message
+              </button>
+            </div>
+            <div class="form-success" id="form-success" role="alert" aria-live="polite">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Message sent! We'll be in touch soon.
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div class="reveal reveal--d1">
+          <div class="contact-info-card">
+            <h3>Contact information</h3>
+            <div class="cinfo-item">
+              <div class="cinfo-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
+              </div>
+              <div>
+                <h4>Phone <span class="sample-badge" style="margin-left:4px">Sample</span></h4>
+                <p>(619) 555-0100</p>
+              </div>
+            </div>
+            <div class="cinfo-item">
+              <div class="cinfo-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h4>Email <span class="sample-badge" style="margin-left:4px">Sample</span></h4>
+                <p>hello@therefuge.org</p>
+              </div>
+            </div>
+            <div class="cinfo-item">
+              <div class="cinfo-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>Office Address <span class="sample-badge" style="margin-left:4px">Sample</span></h4>
+                <p>San Diego, CA 92105<br>By appointment only</p>
+              </div>
+            </div>
+            <div class="cinfo-item">
+              <div class="cinfo-icon">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>Hours <span class="sample-badge" style="margin-left:4px">Sample</span></h4>
+                <p>Mon–Fri: 9 AM – 5 PM<br>Sat: 10 AM – 2 PM</p>
+              </div>
+            </div>
+
+            <!-- Language Support -->
+            <div class="lang-chips">
+              <p style="font-size:var(--text-xs);font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;width:100%;margin-bottom:var(--s1)">Languages supported</p>
+              <span class="lang-chip">English</span>
+              <span class="lang-chip">العربية</span>
+              <span class="lang-chip">Español</span>
+              <span class="lang-chip">Français</span>
+              <span class="lang-chip">دری</span>
+              <span class="lang-chip">پښتو</span>
+            </div>
+          </div>
+
+          <!-- Emergency Reminder -->
+          <div style="margin-top:var(--s5);background:var(--emergency-bg);border:1px solid rgba(196,56,43,.2);border-radius:var(--r-lg);padding:var(--s5)">
+            <p style="font-size:var(--text-sm);color:var(--emergency);font-weight:700;margin-bottom:var(--s1)">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="display:inline;margin-right:4px;vertical-align:middle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+              In an emergency?
+            </p>
+            <p style="font-size:var(--text-sm);color:var(--ink-2)">Don't use this form. Call <a href="tel:18003755283" style="color:var(--emergency);font-weight:700">1-800-375-5283</a> (USCIS, 24/7) or <a href="tel:211" style="color:var(--emergency);font-weight:700">2-1-1</a> for immediate local help.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </span>
+          The Refuge<span class="dot">.</span>
+        </a>
+        <p>Empowering Lives, Bridging Communities. A prototype resource hub for refugees in San Diego.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Pages</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="employment.html">Employment</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="sources.html">Sources</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="resources.html#emergency">Emergency Help</a></li>
+          <li><a href="resources.html#housing">Housing</a></li>
+          <li><a href="resources.html#legal">Legal Aid</a></li>
+          <li><a href="resources.html#healthcare">Healthcare</a></li>
+          <li><a href="resources.html#education">Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Languages</h5>
+        <ul>
+          <li>English</li>
+          <li>العربية</li>
+          <li>Español</li>
+          <li>Français</li>
+          <li>دری (Dari)</li>
+          <li>پښتو (Pashto)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bg-word" aria-hidden="true">REFUGE</div>
+    <div class="footer-bottom">
+      <span>Built by Armaghan Zarak · San Diego, CA · HBS Project · Prototype Site</span>
+      <span>© 2026 The Refuge</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
