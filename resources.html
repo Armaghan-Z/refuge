@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resource Center — The Refuge</title>
-  <meta name="description" content="Emergency, housing, legal, healthcare, and education resources for refugees in San Diego.">
+  <title>Resources — The Refuge · San Diego Refugee Resources</title>
+  <meta name="description" content="Comprehensive resource guide for refugees in San Diego: emergency help, housing, legal aid, healthcare, mental health, food, education, transportation, financial services, and clothing.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" aria-hidden="true"></div>
+<div id="google_translate_element" aria-hidden="true"></div>
 
-<div class="emergency-banner" id="emergency-banner">
+<div class="emergency-banner" id="emergency-banner" role="alert">
   <div class="container">
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    <span>24/7 Immigration Emergency Support — Call <a href="tel:18003755283">1-800-375-5283</a> (USCIS Contact Center)</span>
+    <span>24/7 Immigration Emergency Support — Call <a href="tel:18003755283">1-800-375-5283</a> (USCIS) &nbsp;·&nbsp; Local help: <a href="tel:211">2-1-1</a></span>
   </div>
   <button class="emergency-banner__dismiss" id="banner-dismiss" aria-label="Dismiss alert">✕</button>
 </div>
@@ -27,21 +27,20 @@
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html" class="brand">
-        <span class="brand__icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </span>
+        <span class="brand__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
         The Refuge<span class="dot">.</span>
       </a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav__links" id="nav-links" role="list">
         <li><a href="index.html">Home</a></li>
+        <li><a href="first-steps.html">First Steps</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
         <li><a href="employment.html">Employment</a></li>
         <li><a href="community.html">Community</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav__cta btn btn--primary btn--sm">Contact Us</a></li>
+        <li><button class="nav__lang-btn" id="lang-btn" type="button"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span id="lang-btn-label">Language</span></button></li>
+        <li><a href="contact.html" class="nav__cta btn btn--primary btn--sm">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -49,277 +48,464 @@
 
 <main id="main">
 
-  <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">Resource Center</span>
-      <h1>Everything you need,<br><span class="hl">all in one place.</span></h1>
-      <p class="lead">Verified resources for emergency help, housing, legal assistance, healthcare, and education — with real links to trusted organizations.</p>
+      <span class="eyebrow">Resources</span>
+      <h1>All the help you need, <span class="hl">verified.</span></h1>
+      <p class="lead">Every phone number, address, and program here has been researched and verified. Use the quick links below to jump to what you need most.</p>
     </div>
   </section>
 
-  <!-- Main Content -->
   <section class="section section--alt">
     <div class="container">
 
-      <!-- Jump Navigation -->
-      <nav aria-label="Resource sections" class="jump-links">
-        <a href="#emergency" class="jump-link">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
-          Emergency
-        </a>
-        <a href="#housing" class="jump-link">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          Housing
-        </a>
-        <a href="#legal" class="jump-link">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Legal
-        </a>
-        <a href="#healthcare" class="jump-link">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
-          Healthcare
-        </a>
-        <a href="#education" class="jump-link">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          Education
-        </a>
+      <!-- Jump links -->
+      <nav class="jump-links" aria-label="Section navigation">
+        <a href="#emergency" class="jump-link">🚨 Emergency</a>
+        <a href="#housing" class="jump-link">🏠 Housing</a>
+        <a href="#legal" class="jump-link">⚖️ Legal Aid</a>
+        <a href="#healthcare" class="jump-link">🏥 Healthcare</a>
+        <a href="#mentalhealth" class="jump-link">💙 Mental Health</a>
+        <a href="#food" class="jump-link">🍎 Food</a>
+        <a href="#education" class="jump-link">📚 Education</a>
+        <a href="#transportation" class="jump-link">🚌 Transportation</a>
+        <a href="#financial" class="jump-link">🏦 Financial</a>
+        <a href="#clothing" class="jump-link">👕 Clothing</a>
       </nav>
 
-      <!-- Emergency -->
-      <div id="emergency" class="resource-section">
-        <div class="emergency-box">
-          <div class="emergency-box__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <!-- EMERGENCY -->
+      <div class="resource-section" id="emergency">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" style="background:rgba(196,56,43,.12);color:var(--emergency)" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
           </div>
           <div>
-            <h3>Need immediate help right now?</h3>
+            <h2 class="resource-section__title">Emergency &amp; Crisis</h2>
+            <p class="resource-section__desc">Use these resources when you need immediate help — available 24 hours a day, 7 days a week.</p>
+          </div>
+        </div>
+        <div class="emergency-box">
+          <div class="emergency-box__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
+          </div>
+          <div>
+            <h3>24/7 Emergency Numbers</h3>
             <p>
-              Call the <strong>USCIS Contact Center</strong> at <a href="tel:18003755283">1-800-375-5283</a> (available 24/7, with interpreters). For domestic emergencies, call <a href="tel:911">911</a>. For immediate shelter in San Diego, contact <a href="tel:12-1-1">2-1-1 San Diego</a> (dial 2-1-1) — available around the clock in multiple languages.
+              <strong>911</strong> — Police, fire, or medical emergency<br>
+              <a href="tel:211"><strong>2-1-1</strong></a> — San Diego social services crisis line (housing, food, shelter) — 24/7, multilingual<br>
+              <a href="tel:18003755283"><strong>1-800-375-5283</strong></a> — USCIS immigration emergency line — 24/7<br>
+              <strong>IRC San Diego:</strong> <a href="tel:6196417510">(619) 641-7510</a><br>
+              <strong>Family Migrant Shelter:</strong> <a href="tel:6195360823">(619) 536-0823</a>
             </p>
           </div>
         </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top">
+              <div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+              <div><h4>IRC San Diego — Emergency Services</h4><span class="resource-card__type">Resettlement Agency</span></div>
+            </div>
+            <p class="resource-card__desc">International Rescue Committee provides emergency housing placement, food, case management, and crisis support for newly arrived refugees and those in immediate need.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>5348 University Ave, San Diego, CA 92105</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top">
+              <div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/></svg></div>
+              <div><h4>211 San Diego</h4><span class="resource-card__type">Crisis Hotline &amp; Social Services</span></div>
+            </div>
+            <p class="resource-card__desc">Call or text 2-1-1 for immediate connection to emergency shelter, food, housing assistance, mental health crisis support, and other social services. Available 24/7 in multiple languages.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:211">2-1-1</a> (call or text, 24/7)</div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · 24/7 · Multilingual</span></div>
+          </div>
+        </div>
       </div>
 
-      <!-- Housing -->
-      <div id="housing" class="resource-section">
+      <!-- HOUSING -->
+      <div class="resource-section" id="housing">
         <div class="resource-section__header">
-          <div class="resource-section__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <h2 class="resource-section__title">Housing</h2>
+            <p class="resource-section__desc">Emergency shelter, transitional housing, and permanent placement assistance for refugees.</p>
           </div>
-          <h2 class="resource-section__title">Housing Assistance</h2>
         </div>
-        <div class="resource-grid reveal">
+        <div class="resource-grid">
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div><h4>IRC Transitional Housing Program</h4><span class="resource-card__type">Transitional &amp; Permanent Housing</span></div></div>
+            <p class="resource-card__desc">IRC's housing team places newly arrived refugees in temporary apartments and works to transition them into stable, permanent housing. Includes utility setup and furnishing assistance.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>5348 University Ave, San Diego 92105</span></div>
             </div>
-            <div>
-              <h4>Emergency Shelter Listings</h4>
-              <p>Searchable database of emergency shelters across the U.S., including San Diego. Filter by population served, availability, and services offered.</p>
-              <a href="https://www.shelterlistings.org/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                shelterlistings.org
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div><h4>Catholic Charities — RHSP</h4><span class="resource-card__type">Refugee Housing Services Program</span></div></div>
+            <p class="resource-card__desc">Refugee Housing Services Program provides housing search assistance, rental support, and move-in cost help for newly arrived refugees and immigrants.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg><a href="tel:6192879454">(619) 287-9454 ext. 2100</a></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>4575-A Mission Gorge Place, San Diego</span></div>
             </div>
-            <div>
-              <h4>HUD Rental Assistance</h4>
-              <p>U.S. Department of Housing and Urban Development rental assistance programs. Find local housing agencies, voucher programs, and affordable housing options.</p>
-              <a href="https://www.hud.gov/topics/rental_assistance" target="_blank" rel="noopener noreferrer" class="ext-link">
-                hud.gov
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg></div><div><h4>211 San Diego — Emergency Shelter</h4><span class="resource-card__type">Emergency Shelter Coordination</span></div></div>
+            <p class="resource-card__desc">Call 2-1-1 to be connected immediately to available emergency shelter beds in San Diego County. Operates 24/7. Bilingual operators available in many languages.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:211">2-1-1</a> (24/7)</div>
             </div>
-            <div>
-              <h4>IRC San Diego — Refugee Housing</h4>
-              <p>The International Rescue Committee in San Diego provides direct housing placement and transition services for newly arrived refugees and asylees.</p>
-              <a href="https://www.rescue.org/united-states/san-diego-ca" target="_blank" rel="noopener noreferrer" class="ext-link">
-                rescue.org/san-diego
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · 24/7</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div><h4>Section 8 / Housing Choice Voucher</h4><span class="resource-card__type">Long-term Rental Assistance</span></div></div>
+            <p class="resource-card__desc">Federal rental subsidy program administered by the San Diego Housing Commission. Refugees with legal status can apply. Waitlists are long — apply as soon as possible.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 578-7584 — San Diego Housing Commission</span></div>
             </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Income-based</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Legal -->
-      <div id="legal" class="resource-section">
+      <!-- LEGAL -->
+      <div class="resource-section" id="legal">
         <div class="resource-section__header">
-          <div class="resource-section__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </div>
-          <h2 class="resource-section__title">Legal Assistance</h2>
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h2 class="resource-section__title">Legal Aid &amp; Immigration</h2><p class="resource-section__desc">Free or low-cost immigration legal services. Never pay for immigration help without verifying the person is a licensed attorney or accredited representative.</p></div>
         </div>
-        <div class="resource-grid reveal">
+        <div class="info-box info-box--warn">
+          <div class="info-box__icon">⚠</div>
+          <div>
+            <div class="info-box__title">Warning: Immigration Fraud (Notario Fraud)</div>
+            <p>Some people pretend to be immigration lawyers but are not. Only use a licensed attorney or an accredited representative. If someone charges $500+ for simple forms, that is likely fraud. Verify at <a href="https://www.ilrc.org" target="_blank" rel="noopener">ILRC.org</a>.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>IRC Legal Services</h4><span class="resource-card__type">Immigration Legal Aid</span></div></div>
+            <p class="resource-card__desc">Free immigration legal consultations, help with Employment Authorization Documents (EADs), green card applications, family reunification, and citizenship applications. Priority for refugees.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
             </div>
-            <div>
-              <h4>Immigration Legal Directory</h4>
-              <p>Find accredited immigration representatives and free or low-cost legal help near you. Searchable by zip code and type of service needed.</p>
-              <a href="https://www.immigrationadvocates.org/nonprofit/legaldirectory/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                immigrationadvocates.org
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Catholic Charities Immigration Services</h4><span class="resource-card__type">BIA Accredited Legal Services</span></div></div>
+            <p class="resource-card__desc">Bureau of Immigration Affairs (BIA) accredited representatives provide immigration legal help at low or no cost. Services include DACA, asylum, adjustment of status, and citizenship applications.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12"/></svg><a href="tel:6192879454">(619) 287-9454</a></div>
             </div>
-            <div>
-              <h4>USCIS — Documentation Help</h4>
-              <p>Official U.S. Citizenship and Immigration Services guides for ID documents, work authorization, travel documents, and asylum applications.</p>
-              <a href="https://www.uscis.gov/humanitarian/refugees-and-asylum" target="_blank" rel="noopener noreferrer" class="ext-link">
-                uscis.gov
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Low-cost / free</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>World Relief San Diego</h4><span class="resource-card__type">Immigration &amp; Legal Services</span></div></div>
+            <p class="resource-card__desc">Legal assistance with immigration cases, employment authorization, and family unification. Specializes in serving recent arrivals and those in complex immigration situations.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg><a href="mailto:socalsandiego@wr.org">socalsandiego@wr.org</a></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg><span>4858 Mercury St Suite 202, San Diego</span></div>
             </div>
-            <div>
-              <h4>Jewish Family Service — Legal Aid</h4>
-              <p>JFS San Diego offers free immigration legal services including consultations, applications, and representation for refugees and asylum seekers.</p>
-              <a href="https://www.jfssd.org/our-services/legal-services/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                jfssd.org/legal
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Legal Aid Society of San Diego</h4><span class="resource-card__type">Free Civil Legal Aid</span></div></div>
+            <p class="resource-card__desc">Free legal assistance for low-income people including refugees. Help with immigration, housing, employment, and family law. LASSSD has multilingual staff and can connect with interpreters.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 471-2666</span></div>
             </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Healthcare -->
-      <div id="healthcare" class="resource-section">
+      <!-- HEALTHCARE -->
+      <div class="resource-section" id="healthcare">
         <div class="resource-section__header">
-          <div class="resource-section__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
-          </div>
-          <h2 class="resource-section__title">Healthcare</h2>
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div><h2 class="resource-section__title">Healthcare</h2><p class="resource-section__desc">Free and sliding-scale medical care. All refugees are encouraged to get a free health screening within 90 days of arrival.</p></div>
         </div>
-        <div class="resource-grid reveal">
+        <div class="resource-grid">
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h4>Family Health Centers of San Diego (FHCSD)</h4><span class="resource-card__type">Community Health Center</span></div></div>
+            <p class="resource-card__desc">Federally Qualified Health Center with multiple San Diego locations. Sliding-scale fees based on income — many refugees pay nothing. Provides primary care, dental, mental health, and OB/GYN services.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 234-5252 — main line</span></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><span>Multiple San Diego locations</span></div>
             </div>
-            <div>
-              <h4>HRSA — Find a Health Center</h4>
-              <p>Locate federally qualified health centers near you that provide care regardless of ability to pay, including primary care, dental, and mental health services.</p>
-              <a href="https://findahealthcenter.hrsa.gov/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                findahealthcenter.hrsa.gov
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Sliding scale</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h4>San Ysidro Health</h4><span class="resource-card__type">Federally Qualified Health Center</span></div></div>
+            <p class="resource-card__desc">Network of community health centers serving South San Diego and border communities. Accepts Medi-Cal and sliding-scale patients. Services include primary care, dental, vision, and behavioral health.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 428-1281</span></div>
             </div>
-            <div>
-              <h4>SAMHSA — Mental Health Support</h4>
-              <p>Substance Abuse and Mental Health Services Administration treatment finder — locate mental health counselors and trauma-informed care services near you.</p>
-              <a href="https://findtreatment.samhsa.gov/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                findtreatment.samhsa.gov
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Sliding scale · Medi-Cal accepted</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h4>County Refugee Health Program</h4><span class="resource-card__type">Free Initial Health Screening</span></div></div>
+            <p class="resource-card__desc">San Diego County provides a free comprehensive health screening for all newly arrived refugees within 90 days of arrival. Includes TB testing, blood work, vaccines, and referrals to specialists if needed.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 692-8838</span></div>
             </div>
-            <div>
-              <h4>Medi-Cal for Refugees</h4>
-              <p>California's Medi-Cal program offers free or low-cost health coverage for refugees and asylum seekers. Apply through Covered California or your county health office.</p>
-              <a href="https://www.coveredca.com/apply/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                coveredca.com
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · Required within 90 days</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h4>Medi-Cal</h4><span class="resource-card__type">Free Health Insurance</span></div></div>
+            <p class="resource-card__desc">California's free health insurance program for low-income residents. Most refugees qualify immediately upon arrival. Covers doctor visits, hospital care, prescriptions, and dental. Apply at BenefitsCal.com.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><a href="https://www.benefitscal.com" target="_blank" rel="noopener">BenefitsCal.com</a> — apply online</div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(888) 777-0960</span></div>
             </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h4>Rady Children's Hospital</h4><span class="resource-card__type">Pediatric Healthcare</span></div></div>
+            <p class="resource-card__desc">Specializes in pediatric and adolescent care. Has medical interpreter services available in many languages. Accepts Medi-Cal. For children and teens under 18.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(858) 576-1700</span></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg><span>3020 Children's Way, San Diego 92123</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Medi-Cal accepted</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Education -->
-      <div id="education" class="resource-section">
+      <!-- MENTAL HEALTH -->
+      <div class="resource-section" id="mentalhealth">
         <div class="resource-section__header">
-          <div class="resource-section__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <h2 class="resource-section__title">Education &amp; Training</h2>
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div><h2 class="resource-section__title">Mental Health &amp; Trauma Support</h2><p class="resource-section__desc">Free counseling and trauma care. Seeking mental health support is a sign of strength, not weakness.</p></div>
         </div>
-        <div class="resource-grid reveal">
+        <div class="resource-grid">
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div><h4>Survivors of Torture International</h4><span class="resource-card__type">Specialized Trauma &amp; Torture Rehabilitation</span></div></div>
+            <p class="resource-card__desc">Provides specialized rehabilitation services for survivors of torture and severe trauma, including individual psychotherapy, group therapy, case management, and social services. All services are completely free. Serves refugees and asylum seekers.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6192782400">(619) 278-2400</a></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg><span>San Diego, CA</span></div>
             </div>
-            <div>
-              <h4>ESL / English Classes — San Diego</h4>
-              <p>San Diego Continuing Education offers free English as a Second Language classes throughout the county, with multiple levels, schedules, and locations.</p>
-              <a href="https://www.sdce.edu/classes/esl" target="_blank" rel="noopener noreferrer" class="ext-link">
-                sdce.edu/esl
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · Specialized trauma care</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg></div><div><h4>County Behavioral Health Services</h4><span class="resource-card__type">Crisis Line &amp; Mental Health</span></div></div>
+            <p class="resource-card__desc">San Diego County's 24/7 mental health crisis line. For people in immediate emotional distress or mental health crisis. Connects to crisis counselors, mobile crisis teams, and emergency services.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:8887247240">(888) 724-7240</a> — 24/7 crisis line</div>
             </div>
-            <div>
-              <h4>Job Training — Workforce Partnership</h4>
-              <p>San Diego Workforce Partnership provides free vocational training, certifications, and career development programs for eligible adults including refugees.</p>
-              <a href="https://workforce.org/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                workforce.org
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · 24/7</span></div>
           </div>
           <div class="resource-card">
-            <div class="resource-card__icon">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div><h4>IRC Mental Health Program</h4><span class="resource-card__type">Refugee Mental Health Services</span></div></div>
+            <p class="resource-card__desc">IRC provides individual counseling, group support, and mental health case management specifically tailored to refugee experiences including war trauma, displacement, and acculturation stress.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
             </div>
-            <div>
-              <h4>Duolingo for Refugees</h4>
-              <p>Free language learning app available in 40+ languages. Refugees can apply for Duolingo English Test fee waivers for university admissions.</p>
-              <a href="https://www.duolingo.com/" target="_blank" rel="noopener noreferrer" class="ext-link">
-                duolingo.com
-                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg></div><div><h4>SAMHSA National Helpline</h4><span class="resource-card__type">Mental Health &amp; Substance Use</span></div></div>
+            <p class="resource-card__desc">Free, confidential treatment referral and information service for mental health and substance use. Available in English and Spanish, with other language support through interpreters.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:18006624357">1-800-662-4357</a> — 24/7, free</div>
             </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · 24/7 · Multilingual</span></div>
           </div>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>Can't find what you need?</h2>
-      <p>Reach out directly — we'll do our best to connect you with the right resource for your situation.</p>
-      <div class="btn-group" style="justify-content:center">
-        <a href="contact.html" class="btn btn--amber">
-          Contact Us
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="community.html" class="btn btn--ghost">Find Local Orgs</a>
+      <!-- FOOD -->
+      <div class="resource-section" id="food">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <div><h2 class="resource-section__title">Food &amp; Nutrition</h2><p class="resource-section__desc">Free food, food assistance programs, and nutrition support.</p></div>
+        </div>
+        <div class="info-box info-box--warn">
+          <div class="info-box__icon">ℹ</div>
+          <div>
+            <div class="info-box__title">CalFresh Eligibility Note (2026)</div>
+            <p>Federal policy changes (H.R.1) may have affected CalFresh eligibility for some refugees. Verify your current eligibility at <a href="https://www.benefitscal.com" target="_blank" rel="noopener">BenefitsCal.com</a> before applying. IRC and Catholic Charities can also help you check eligibility.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/></svg></div><div><h4>CalFresh (Food Stamps / SNAP)</h4><span class="resource-card__type">Monthly Food Benefits</span></div></div>
+            <p class="resource-card__desc">Monthly EBT card for food purchases at grocery stores and farmers markets. Apply online at BenefitsCal.com or in person at a county HHSA office. Many refugees qualify — verify eligibility first.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><a href="https://www.benefitscal.com" target="_blank" rel="noopener">BenefitsCal.com</a></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(877) 847-3663 — HHSA benefits line</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Income-based · Verify eligibility first</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/></svg></div><div><h4>San Diego Food Bank</h4><span class="resource-card__type">Free Food Distribution</span></div></div>
+            <p class="resource-card__desc">Free food distributed at multiple San Diego locations throughout the week. No ID or documentation required. Distributes fresh produce, canned goods, protein, and dairy. Call for the nearest distribution site.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:8588272873">(858) 827-2873</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · No documentation required</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div><div><h4>WIC Program</h4><span class="resource-card__type">Nutrition for Women, Infants &amp; Children</span></div></div>
+            <p class="resource-card__desc">Free supplemental nutrition for pregnant women, new mothers, and children under 5. Provides food vouchers, nutrition education, and healthcare referrals. No documentation requirement for children.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(888) 942-9675</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · For mothers and children under 5</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg></div><div><h4>211 San Diego — Food Pantries</h4><span class="resource-card__type">Food Pantry Locator</span></div></div>
+            <p class="resource-card__desc">Call 2-1-1 to find the nearest food pantry, soup kitchen, or free meal program in your area. Updated daily with current availability.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:211">2-1-1</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · 24/7</span></div>
+          </div>
+        </div>
       </div>
+
+      <!-- EDUCATION -->
+      <div class="resource-section" id="education">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div><h2 class="resource-section__title">Education &amp; ESL</h2><p class="resource-section__desc">Free English classes, GED programs, school enrollment, and vocational training.</p></div>
+        </div>
+        <div class="info-box info-box--tip">
+          <div class="info-box__icon">📚</div>
+          <div>
+            <div class="info-box__title">Children have the right to attend school</div>
+            <p>Under Plyler v. Doe (1982), all children have the right to attend public school regardless of immigration status. Contact your local school district to enroll — no documentation required from parents.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/></svg></div><div><h4>San Diego Continuing Education (SDCCE)</h4><span class="resource-card__type">Free Adult Education</span></div></div>
+            <p class="resource-card__desc">Completely free adult education programs including ESL (all levels), GED preparation, citizenship test prep, and workforce training. Multiple campuses across San Diego County. No documentation required to enroll.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 388-1800</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">100% Free · Multiple locations</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/></svg></div><div><h4>El Cajon Adult School</h4><span class="resource-card__type">ESL &amp; Vocational Training</span></div></div>
+            <p class="resource-card__desc">Free ESL classes in El Cajon — a major area of refugee settlement in San Diego County. Multiple levels from beginner to advanced. Also offers vocational training and citizenship prep.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6195880748">(619) 588-0748</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div><h4>Chula Vista Adult School</h4><span class="resource-card__type">ESL &amp; Vocational Training</span></div></div>
+            <p class="resource-card__desc">Free ESL classes in South San Diego. Also offers vocational certifications in healthcare, office skills, and other fields. Serves a large refugee and immigrant population.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 422-7040</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div><h4>IRC VESL Program</h4><span class="resource-card__type">Vocational ESL</span></div></div>
+            <p class="resource-card__desc">Vocational English as a Second Language — combines workplace English with job-specific vocabulary. Designed for refugees entering the workforce. Includes job placement support.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANSPORTATION -->
+      <div class="resource-section" id="transportation">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div><h2 class="resource-section__title">Transportation</h2><p class="resource-section__desc">Getting around San Diego using public transit and other options.</p></div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/></svg></div><div><h4>MTS (Metropolitan Transit System)</h4><span class="resource-card__type">Bus &amp; Trolley</span></div></div>
+            <p class="resource-card__desc">San Diego's bus and trolley network. Get a Compass Card (reloadable transit card) at the MTS store. Plan trips with Google Maps or the MTS trip planner. Low-income riders may qualify for the PRONTO discount program.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>511 — trip planning line</span></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg><span>MTS Store: 1255 Imperial Ave, San Diego</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Pay-per-ride · Discounts available</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg></div><div><h4>California AB 60 Driver's License</h4><span class="resource-card__type">Driver's License Program</span></div></div>
+            <p class="resource-card__desc">California law (AB 60) allows residents to get a driver's license regardless of immigration status. Visit the San Diego DMV with proof of identity and California residency. Must pass written and driving tests.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(800) 777-0133 — DMV appointment line</span></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg><span>3960 Normal St, San Diego (main office)</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--new">Open to all immigrants</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FINANCIAL -->
+      <div class="resource-section" id="financial">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+          <div><h2 class="resource-section__title">Financial Services &amp; Banking</h2><p class="resource-section__desc">Opening a bank account, building credit, and managing money as a newcomer.</p></div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div><div><h4>Opening a Bank Account (Without SSN)</h4><span class="resource-card__type">Banking Access</span></div></div>
+            <p class="resource-card__desc">You can open a bank account without a Social Security Number using: a Refugee Travel Document, I-94 (Arrival/Departure Record), or passport + proof of address. Many banks and credit unions in San Diego accept these. Recommended options: Bank of America Opportunity Checking, Mission Federal Credit Union, California Coast CU.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>IRC also offers financial coaching — (619) 641-7510</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--new">No SSN required</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/></svg></div><div><h4>IRC Financial Coaching</h4><span class="resource-card__type">Free Financial Education</span></div></div>
+            <p class="resource-card__desc">IRC offers free one-on-one financial coaching to help refugees open bank accounts, build credit, budget, and work toward financial stability. Available in multiple languages.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLOTHING -->
+      <div class="resource-section" id="clothing">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg></div>
+          <div><h2 class="resource-section__title">Clothing &amp; Household Items</h2><p class="resource-section__desc">Free or very low-cost clothing, furniture, and household goods for newly arrived refugees.</p></div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div><h4>IRC New Roots Program</h4><span class="resource-card__type">Household Setup Services</span></div></div>
+            <p class="resource-card__desc">IRC helps newly arrived refugee families set up their first home in San Diego with donated furniture, household goods, and clothing. Coordinate through your IRC case manager.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57"/></svg></div><div><h4>House of Refuge</h4><span class="resource-card__type">Furniture &amp; Household Goods</span></div></div>
+            <p class="resource-card__desc">Provides free furniture and household goods to low-income families including refugees. Items include beds, sofas, tables, kitchen supplies, and bedding. By appointment.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 234-7948</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free · By appointment</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg></div><div><h4>Goodwill Industries</h4><span class="resource-card__type">Very Low-Cost Clothing &amp; Household</span></div></div>
+            <p class="resource-card__desc">Multiple San Diego locations with very low-cost secondhand clothing, shoes, household items, and furniture. No documentation required. Many items cost $1–$5.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(858) 753-6655</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Very low cost</span></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -329,56 +515,17 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="brand">
-          <span class="brand__icon" aria-hidden="true">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </span>
-          The Refuge<span class="dot">.</span>
-        </a>
-        <p>Empowering Lives, Bridging Communities. A prototype resource hub for refugees in San Diego.</p>
+        <a href="index.html" class="brand"><span class="brand__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>The Refuge<span class="dot">.</span></a>
+        <p>Empowering Lives, Bridging Communities. A free resource hub for refugees in San Diego.</p>
       </div>
-      <div class="footer-col">
-        <h5>Pages</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="employment.html">Employment</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="sources.html">Sources</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Resources</h5>
-        <ul>
-          <li><a href="#emergency">Emergency Help</a></li>
-          <li><a href="#housing">Housing</a></li>
-          <li><a href="#legal">Legal Aid</a></li>
-          <li><a href="#healthcare">Healthcare</a></li>
-          <li><a href="#education">Education</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Languages</h5>
-        <ul>
-          <li>English</li>
-          <li>العربية</li>
-          <li>Español</li>
-          <li>Français</li>
-          <li>دری (Dari)</li>
-          <li>پښتو (Pashto)</li>
-        </ul>
-      </div>
+      <div class="footer-col"><h5>Pages</h5><ul><li><a href="index.html">Home</a></li><li><a href="first-steps.html">First Steps</a></li><li><a href="resources.html">Resources</a></li><li><a href="benefits.html">Benefits</a></li><li><a href="employment.html">Employment</a></li><li><a href="community.html">Community</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul><li><a href="#emergency">Emergency</a></li><li><a href="#housing">Housing</a></li><li><a href="#legal">Legal Aid</a></li><li><a href="#healthcare">Healthcare</a></li><li><a href="#mentalhealth">Mental Health</a></li><li><a href="#food">Food</a></li><li><a href="#education">Education</a></li><li><a href="#transportation">Transportation</a></li></ul></div>
+      <div class="footer-col"><h5>Languages</h5><ul><li>English</li><li>العربية</li><li>Español</li><li>Français</li><li>دری (Dari)</li><li>پښتو (Pashto)</li></ul></div>
     </div>
-    <div class="footer-bg-word" aria-hidden="true">REFUGE</div>
-    <div class="footer-bottom">
-      <span>Built by Armaghan Zarak · San Diego, CA · HBS Project · Prototype Site</span>
-      <span>© 2026 The Refuge</span>
-    </div>
+    <div class="footer-bg-word" aria-hidden="true">RESOURCES</div>
+    <div class="footer-bottom"><span>Built by Armaghan Zarak · San Diego, CA</span><span>© 2026 The Refuge</span></div>
   </div>
 </footer>
-
 <script src="main.js"></script>
 </body>
 </html>

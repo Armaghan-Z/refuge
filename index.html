@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Refuge — Empowering Lives, Bridging Communities</title>
-  <meta name="description" content="A free refugee resource hub connecting families in San Diego with legal, housing, healthcare, education, and employment support.">
+  <title>The Refuge — Refugee Resource Hub · San Diego</title>
+  <meta name="description" content="Free resource hub for refugees in San Diego. Find housing, healthcare, legal aid, employment, education, and community support. Available in 100+ languages.">
+  <meta name="keywords" content="refugee resources San Diego, refugee housing, refugee healthcare, refugee legal aid, IRC San Diego, Catholic Charities refugees, CalFresh, Medi-Cal refugees">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
@@ -14,21 +15,22 @@
 
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" aria-hidden="true"></div>
+<div id="google_translate_element" aria-hidden="true"></div>
 
 <!-- Emergency Banner -->
-<div class="emergency-banner" id="emergency-banner">
+<div class="emergency-banner" id="emergency-banner" role="alert">
   <div class="container">
     <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    <span>24/7 Immigration Emergency Support — Call <a href="tel:18003755283">1-800-375-5283</a> (USCIS Contact Center)</span>
+    <span>24/7 Immigration Emergency Support — Call <a href="tel:18003755283">1-800-375-5283</a> (USCIS) &nbsp;·&nbsp; Local help: <a href="tel:211">2-1-1</a></span>
   </div>
   <button class="emergency-banner__dismiss" id="banner-dismiss" aria-label="Dismiss alert">✕</button>
 </div>
 
-<!-- Header -->
+<!-- Navigation -->
 <header class="site-header" id="site-header">
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
-      <a href="index.html" class="brand">
+      <a href="index.html" class="brand" aria-label="The Refuge — Home">
         <span class="brand__icon" aria-hidden="true">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </span>
@@ -39,11 +41,19 @@
       </button>
       <ul class="nav__links" id="nav-links" role="list">
         <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="first-steps.html">First Steps</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
         <li><a href="employment.html">Employment</a></li>
         <li><a href="community.html">Community</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav__cta btn btn--primary btn--sm">Contact Us</a></li>
+        <li>
+          <button class="nav__lang-btn" id="lang-btn" aria-label="Change language" type="button">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="lang-btn-label">Language</span>
+          </button>
+        </li>
+        <li><a href="contact.html" class="nav__cta btn btn--primary btn--sm">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -52,200 +62,258 @@
 <main id="main">
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="hero__bg" aria-hidden="true"></div>
-    <div class="hero__grid" aria-hidden="true"></div>
-    <div class="hero__word" aria-hidden="true">REFUGE</div>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__grid"></div>
+      <div class="hero__word">REFUGE</div>
+    </div>
     <div class="container">
       <div class="hero__content">
         <div class="hero__kicker">
-          <span class="pulse" aria-hidden="true"></span>
-          San Diego Refugee Resource Hub
+          <div class="pulse" aria-hidden="true"></div>
+          Free resources for refugees in San Diego, CA
         </div>
-        <h1>
-          Empowering Lives,<br>
-          <span class="hl">Bridging Communities</span>
-          <span class="sub">Resources, community, and hope for a better tomorrow.</span>
+        <h1 id="hero-title" class="h-display">
+          Find the help<br><span class="hl">you need,</span><br>right now.
         </h1>
         <p class="hero__desc">
-          The Refuge connects newly arrived families with legal help, housing, healthcare, education, and job opportunities — all in one place, free of charge.
+          The Refuge connects refugees and newly arrived families in San Diego to verified housing, healthcare, legal aid, employment, and community support — all in one place, completely free.
         </p>
         <div class="btn-group">
-          <a href="resources.html" class="btn btn--primary">
-            Find Resources
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="first-steps.html" class="btn btn--primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Start Here — First Steps
           </a>
-          <a href="community.html" class="btn btn--secondary">Join Community</a>
+          <a href="resources.html" class="btn btn--secondary">Browse All Resources</a>
+        </div>
+        <div class="hero__langs" aria-label="Languages supported">
+          <span class="hero__langs-label">Available in:</span>
+          <span class="hero__lang-chip">English</span>
+          <span class="hero__lang-chip">العربية</span>
+          <span class="hero__lang-chip">Español</span>
+          <span class="hero__lang-chip">Français</span>
+          <span class="hero__lang-chip">دری</span>
+          <span class="hero__lang-chip">پښتو</span>
+          <button class="hero__lang-chip" id="hero-lang-btn" style="cursor:pointer;border:none;background:rgba(13,115,119,.12);font-size:var(--text-xs);padding:3px 10px;border-radius:9999px;color:var(--teal);font-weight:700" type="button">+100 more →</button>
         </div>
       </div>
     </div>
     <div class="hero__scroll" aria-hidden="true">
-      <span>Scroll</span>
-      <span class="hero__scroll-line"></span>
+      <span style="letter-spacing:.1em">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Quick Access Grid -->
+  <section class="section section--alt" aria-labelledby="quick-access-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Quick Access</span>
+        <h2 class="h-section" id="quick-access-title">What do you need <span class="hl">right now?</span></h2>
+        <p class="lead">Jump directly to the help you need most.</p>
+      </div>
+      <div class="quick-access" role="list">
+        <a href="resources.html#emergency" class="quick-card quick-card--emergency reveal" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          </div>
+          <span class="quick-card__label">Emergency Help</span>
+          <span class="quick-card__sub">24/7 crisis support lines</span>
+        </a>
+        <a href="first-steps.html" class="quick-card reveal reveal--d1" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <span class="quick-card__label">First Steps</span>
+          <span class="quick-card__sub">90-day arrival guide</span>
+        </a>
+        <a href="resources.html#housing" class="quick-card reveal reveal--d2" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <span class="quick-card__label">Housing</span>
+          <span class="quick-card__sub">Emergency &amp; transitional</span>
+        </a>
+        <a href="resources.html#legal" class="quick-card reveal reveal--d3" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="quick-card__label">Legal Aid</span>
+          <span class="quick-card__sub">Free immigration help</span>
+        </a>
+        <a href="resources.html#healthcare" class="quick-card reveal" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <span class="quick-card__label">Healthcare</span>
+          <span class="quick-card__sub">Free &amp; sliding-scale care</span>
+        </a>
+        <a href="benefits.html" class="quick-card reveal reveal--d1" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <span class="quick-card__label">Benefits</span>
+          <span class="quick-card__sub">Medi-Cal, CalFresh, RCA</span>
+        </a>
+        <a href="employment.html" class="quick-card reveal reveal--d2" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <span class="quick-card__label">Employment</span>
+          <span class="quick-card__sub">Jobs &amp; training programs</span>
+        </a>
+        <a href="resources.html#education" class="quick-card reveal reveal--d3" role="listitem">
+          <div class="quick-card__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <span class="quick-card__label">Education &amp; ESL</span>
+          <span class="quick-card__sub">Free English classes</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- Stats Strip -->
-  <div class="stats-strip">
+  <div class="stats-strip" aria-label="Impact statistics">
     <div class="container">
       <div class="stats-strip__inner">
         <div class="stat reveal">
-          <div class="stat__n"><span data-count="7500">0</span><span>+</span></div>
-          <div class="stat__l">Refugees to serve</div>
-          <div class="sample-badge stat-badge">Target</div>
+          <div class="stat__n">120K+</div>
+          <div class="stat__l">Refugees welcomed to San Diego since 1975</div>
         </div>
         <div class="stat reveal reveal--d1">
-          <div class="stat__n"><span data-count="2500">0</span><span>+</span></div>
-          <div class="stat__l">Job placements</div>
-          <div class="sample-badge stat-badge">Target</div>
+          <div class="stat__n">10+</div>
+          <div class="stat__l">Verified resource categories</div>
         </div>
         <div class="stat reveal reveal--d2">
-          <div class="stat__n"><span data-count="350">0</span><span>+</span></div>
-          <div class="stat__l">Community events</div>
-          <div class="sample-badge stat-badge">Target</div>
+          <div class="stat__n">100+</div>
+          <div class="stat__l">Languages supported via Google Translate</div>
         </div>
         <div class="stat reveal reveal--d3">
-          <div class="stat__n"><span data-count="6">0</span></div>
-          <div class="stat__l">Languages supported</div>
+          <div class="stat__n">$0</div>
+          <div class="stat__l">Cost — every resource listed is free or subsidized</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Services Bento Grid -->
-  <section class="section section--alt">
+  <!-- Feature Cards -->
+  <section class="section" aria-labelledby="feature-title">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">What We Offer</span>
-        <h2 class="h-section">Every resource you <span class="hl">need, in one place.</span></h2>
-        <p class="lead">From emergency shelter to career development, The Refuge covers the six pillars of building a new life.</p>
+      <div class="section-header section-header--center reveal">
+        <span class="eyebrow">What's here</span>
+        <h2 class="h-section" id="feature-title">Everything you need, <span class="hl">all in one place.</span></h2>
+        <p class="lead lead--center">From the moment you arrive to building a long-term life in San Diego — we've researched and verified every resource so you don't have to.</p>
       </div>
-      <div class="bento">
-        <div class="bento__card bento__card--accent reveal">
-          <div class="bento__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <div class="bento reveal">
+        <div class="bento__card bento__card--wide">
+          <div class="bento__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <h3>Legal Support</h3>
-          <p class="bento__desc">Free legal assistance for asylum applications, documentation, work permits, and immigration questions.</p>
-          <a href="resources.html#legal" class="bento__link">
-            Get legal help <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <h3>Your 90-Day First Steps Guide</h3>
+          <p class="bento__desc">A step-by-step timeline for the first three months after arrival: getting your SSN, applying for benefits, enrolling kids in school, finding ESL classes, and building toward employment. Everything in the right order.</p>
+          <a href="first-steps.html" class="bento__link">
+            Start the guide →
           </a>
-          <span class="bento__bg-num" aria-hidden="true">01</span>
+          <div class="bento__bg-num" aria-hidden="true">90</div>
         </div>
-        <div class="bento__card reveal reveal--d1">
-          <div class="bento__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="bento__card bento__card--accent">
+          <div class="bento__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <h3>Housing Assistance</h3>
-          <p class="bento__desc">Emergency shelter and long-term affordable housing guidance through real San Diego resources.</p>
-          <a href="resources.html#housing" class="bento__link">
-            Find housing <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <span class="bento__bg-num" aria-hidden="true">02</span>
+          <h3>Ask Our Helper</h3>
+          <p class="bento__desc">Our AI helper knows housing, healthcare, legal aid, food assistance, employment, and more. Ask it anything — in any language.</p>
+          <div class="bento__bg-num" aria-hidden="true">AI</div>
         </div>
-        <div class="bento__card reveal reveal--d2">
-          <div class="bento__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <div class="bento__card">
+          <div class="bento__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
           </div>
-          <h3>Career Development</h3>
-          <p class="bento__desc">Job search tools, resume workshops, interview coaching, and refugee-friendly employer connections.</p>
-          <a href="employment.html" class="bento__link">
-            Explore jobs <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <span class="bento__bg-num" aria-hidden="true">03</span>
+          <h3>Benefits Guide</h3>
+          <p class="bento__desc">Medi-Cal, CalFresh, Refugee Cash Assistance, CalWORKs — what you qualify for and how to apply.</p>
+          <a href="benefits.html" class="bento__link">Learn about benefits →</a>
+          <div class="bento__bg-num" aria-hidden="true">$</div>
         </div>
-        <div class="bento__card bento__card--wide reveal">
-          <div class="bento__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.37 2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6 6l.86-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
+        <div class="bento__card">
+          <div class="bento__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
-          <h3>Healthcare Access</h3>
-          <p class="bento__desc">Connect with community health centers, mental health services, and medical care options across San Diego — many at low or no cost.</p>
-          <a href="resources.html#healthcare" class="bento__link">
-            Find care <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <span class="bento__bg-num" aria-hidden="true">04</span>
+          <h3>Employment &amp; Training</h3>
+          <p class="bento__desc">Real job programs, vocational training, resume help, and job boards that work for refugees.</p>
+          <a href="employment.html" class="bento__link">Find jobs →</a>
+          <div class="bento__bg-num" aria-hidden="true">W</div>
         </div>
-        <div class="bento__card reveal reveal--d1">
-          <div class="bento__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          </div>
-          <h3>Education & ESL</h3>
-          <p class="bento__desc">English language classes, job training programs, and educational pathways for adults and children.</p>
-          <a href="resources.html#education" class="bento__link">
-            Start learning <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <span class="bento__bg-num" aria-hidden="true">05</span>
-        </div>
-        <div class="bento__card reveal reveal--d2">
-          <div class="bento__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="bento__card">
+          <div class="bento__icon" aria-hidden="true">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <h3>Community</h3>
-          <p class="bento__desc">Real San Diego organizations, cultural events, volunteer opportunities, and a welcoming support network.</p>
-          <a href="community.html" class="bento__link">
-            Get connected <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <span class="bento__bg-num" aria-hidden="true">06</span>
+          <p class="bento__desc">IRC, JFS/HIAS, Catholic Charities, Alliance for African Assistance, and more — real orgs with real contact info.</p>
+          <a href="community.html" class="bento__link">Find community →</a>
+          <div class="bento__bg-num" aria-hidden="true">C</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Success Stories (Sample) -->
-  <section class="section">
+  <!-- Key Resettlement Orgs -->
+  <section class="section section--alt" aria-labelledby="orgs-title">
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow">Stories of Hope</span>
-        <h2 class="h-section">Real journeys. <span class="hl">Real change.</span></h2>
-        <p class="lead">These are illustrative examples of the kinds of paths The Refuge is designed to support.</p>
+        <span class="eyebrow">Key Organizations</span>
+        <h2 class="h-section" id="orgs-title">The organizations that <span class="hl">help you most.</span></h2>
+        <p class="lead">These are San Diego's primary refugee resettlement agencies. All are free, all serve all nationalities and religions.</p>
       </div>
-      <div class="stories-grid">
-        <!-- Story 1 -->
-        <article class="story-card reveal">
-          <span class="sample-badge sample-pin">Illustrative Example</span>
-          <div class="story-card__avatar" style="background:var(--teal)">S</div>
-          <blockquote class="story-card__quote">
-            "I arrived knowing no English and not knowing where to start. The legal resources here helped me file my asylum application and find stable housing within two months."
-          </blockquote>
-          <div class="story-card__name">Sarah K.</div>
-          <div class="story-card__meta">Syria → San Diego · Used: Legal Aid, Housing</div>
-        </article>
-        <!-- Story 2 -->
-        <article class="story-card reveal reveal--d1">
-          <span class="sample-badge sample-pin">Illustrative Example</span>
-          <div class="story-card__avatar" style="background:var(--amber)">A</div>
-          <blockquote class="story-card__quote">
-            "The career resources helped me translate my engineering experience into a U.S. resume. I had three interviews within a month of using the job board."
-          </blockquote>
-          <div class="story-card__name">Ahmed R.</div>
-          <div class="story-card__meta">Iraq → San Diego · Used: Employment, Career Workshop</div>
-        </article>
-        <!-- Story 3 -->
-        <article class="story-card reveal reveal--d2">
-          <span class="sample-badge sample-pin">Illustrative Example</span>
-          <div class="story-card__avatar" style="background:#7C3AED">M</div>
-          <blockquote class="story-card__quote">
-            "The ESL program listed here changed everything for my family. My kids are in school, I'm working, and we finally feel part of a community."
-          </blockquote>
-          <div class="story-card__name">Maria L.</div>
-          <div class="story-card__meta">Guatemala → San Diego · Used: Education, Community</div>
-        </article>
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>IRC San Diego</h3>
+          <p>International Rescue Committee — full resettlement services: housing, case management, employment, legal, and mental health. Founded 1975.</p>
+          <div style="margin-top:var(--s4);display:flex;flex-direction:column;gap:var(--s2)">
+            <a href="tel:6196417510" style="font-size:var(--text-sm);font-weight:700;color:var(--teal)">(619) 641-7510</a>
+            <span style="font-size:var(--text-xs);color:var(--ink-3)">5348 University Ave, San Diego</span>
+          </div>
+        </div>
+        <div class="card reveal reveal--d1">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h3>Catholic Charities</h3>
+          <p>Refugee &amp; Immigrant Services — legal aid, housing, ESL, job training. Open to all regardless of faith or background.</p>
+          <div style="margin-top:var(--s4);display:flex;flex-direction:column;gap:var(--s2)">
+            <a href="tel:6192879454" style="font-size:var(--text-sm);font-weight:700;color:var(--teal)">(619) 287-9454 ext. 2100</a>
+            <span style="font-size:var(--text-xs);color:var(--ink-3)">4575-A Mission Gorge Pl, San Diego</span>
+          </div>
+        </div>
+        <div class="card reveal reveal--d2">
+          <div class="card__icon" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>JFS / HIAS San Diego</h3>
+          <p>Jewish Family Service — comprehensive resettlement, refugee financial coaching, mental health, and English programs. Serves all faiths.</p>
+          <div style="margin-top:var(--s4);display:flex;flex-direction:column;gap:var(--s2)">
+            <a href="tel:8588720101" style="font-size:var(--text-sm);font-weight:700;color:var(--teal)">(858) 872-0101</a>
+            <span style="font-size:var(--text-xs);color:var(--ink-3)">8788 Balboa Ave, San Diego</span>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:var(--s10)" class="reveal">
+        <a href="community.html" class="btn btn--secondary">View All Organizations →</a>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
+  <section class="cta-section" aria-labelledby="cta-title">
     <div class="container">
-      <span class="eyebrow eyebrow--light">Get Started Today</span>
-      <h2>Find the help you need —<br><span style="color:var(--amber-light)">completely free.</span></h2>
-      <p>Browse our full resource directory, search job opportunities, or connect with real San Diego organizations serving the refugee community.</p>
+      <span class="eyebrow eyebrow--light">Ready to start?</span>
+      <h2 id="cta-title">Every journey begins with <br>a single step.</h2>
+      <p>Start with our 90-day arrival guide — it shows you exactly what to do and when, in plain language.</p>
       <div class="btn-group" style="justify-content:center">
-        <a href="resources.html" class="btn btn--amber">
-          Browse Resources
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="about.html" class="btn btn--ghost">Our Mission</a>
+        <a href="first-steps.html" class="btn btn--amber">View First Steps Guide</a>
+        <a href="resources.html" class="btn btn--ghost">Browse All Resources</a>
       </div>
     </div>
   </section>
@@ -263,13 +331,15 @@
           </span>
           The Refuge<span class="dot">.</span>
         </a>
-        <p>Empowering Lives, Bridging Communities. A prototype resource hub connecting refugees in San Diego with the legal, housing, healthcare, education, and employment support they need.</p>
+        <p>Empowering Lives, Bridging Communities. A free resource hub for refugees in San Diego, California.</p>
       </div>
       <div class="footer-col">
         <h5>Pages</h5>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="first-steps.html">First Steps</a></li>
           <li><a href="resources.html">Resources</a></li>
+          <li><a href="benefits.html">Benefits</a></li>
           <li><a href="employment.html">Employment</a></li>
           <li><a href="community.html">Community</a></li>
           <li><a href="about.html">About</a></li>
@@ -284,25 +354,29 @@
           <li><a href="resources.html#housing">Housing</a></li>
           <li><a href="resources.html#legal">Legal Aid</a></li>
           <li><a href="resources.html#healthcare">Healthcare</a></li>
+          <li><a href="resources.html#mentalhealth">Mental Health</a></li>
+          <li><a href="resources.html#food">Food</a></li>
           <li><a href="resources.html#education">Education</a></li>
+          <li><a href="resources.html#transportation">Transportation</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Languages</h5>
         <ul>
           <li>English</li>
-          <li>العربية (Arabic)</li>
-          <li>Español (Spanish)</li>
-          <li>Français (French)</li>
+          <li>العربية</li>
+          <li>Español</li>
+          <li>Français</li>
           <li>دری (Dari)</li>
           <li>پښتو (Pashto)</li>
+          <li style="color:rgba(255,255,255,.4);font-size:var(--text-xs);margin-top:var(--s1)">+100 more via Google Translate</li>
         </ul>
       </div>
     </div>
     <div class="footer-bg-word" aria-hidden="true">REFUGE</div>
     <div class="footer-bottom">
-      <span>Built by Armaghan Zarak · San Diego, CA · HBS Project · Prototype Site</span>
-      <span>© 2026 The Refuge</span>
+      <span>Built by Armaghan Zarak · San Diego, CA</span>
+      <span>© 2026 The Refuge · All resources are free</span>
     </div>
   </div>
 </footer>

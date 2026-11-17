@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employment — The Refuge</title>
-  <meta name="description" content="Job search tools, career resources, and sample listings for refugees in San Diego.">
+  <title>Employment — The Refuge · Jobs &amp; Job Training for Refugees in San Diego</title>
+  <meta name="description" content="Employment resources for refugees in San Diego — job training programs, ESL vocational courses, employment agencies, and job search tools.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" aria-hidden="true"></div>
+<div id="google_translate_element" aria-hidden="true"></div>
 
-<div class="emergency-banner" id="emergency-banner">
+<div class="emergency-banner" id="emergency-banner" role="alert">
   <div class="container">
-    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-    <span>24/7 Immigration Emergency Support — Call <a href="tel:18003755283">1-800-375-5283</a> (USCIS Contact Center)</span>
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+    <span>24/7 Emergency Support — <a href="tel:211">2-1-1</a> &nbsp;·&nbsp; IRC Employment: <a href="tel:6196417510">(619) 641-7510</a></span>
   </div>
   <button class="emergency-banner__dismiss" id="banner-dismiss" aria-label="Dismiss alert">✕</button>
 </div>
@@ -27,21 +27,20 @@
   <div class="container">
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html" class="brand">
-        <span class="brand__icon" aria-hidden="true">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </span>
+        <span class="brand__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
         The Refuge<span class="dot">.</span>
       </a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav__links" id="nav-links" role="list">
         <li><a href="index.html">Home</a></li>
+        <li><a href="first-steps.html">First Steps</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a href="employment.html">Employment</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="employment.html" aria-current="page">Employment</a></li>
         <li><a href="community.html">Community</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav__cta btn btn--primary btn--sm">Contact Us</a></li>
+        <li><button class="nav__lang-btn" id="lang-btn" type="button"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span id="lang-btn-label">Language</span></button></li>
+        <li><a href="contact.html" class="nav__cta btn btn--primary btn--sm">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -49,332 +48,228 @@
 
 <main id="main">
 
-  <!-- Page Hero -->
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">Employment</span>
-      <h1>Find your next<br><span class="hl">opportunity.</span></h1>
-      <p class="lead">Job search platforms, San Diego listings, and career development tools — all in one place.</p>
+      <h1>Your path to a <span class="hl">great job</span> in San Diego</h1>
+      <p class="lead">Refugees are authorized to work in the U.S. immediately after arrival. These programs provide free job training, job placement support, and vocational English to help you build a successful career.</p>
     </div>
   </section>
 
-  <!-- External Job Boards -->
   <section class="section section--alt">
     <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Job Search Platforms</span>
-        <h2 class="h-section">Search on the <span class="hl">major platforms.</span></h2>
-        <p class="lead">These external job sites connect you with employers across San Diego and beyond. Many allow you to filter for refugee-friendly employers.</p>
-      </div>
-      <div class="grid-3 reveal">
-        <a href="https://www.indeed.com/jobs?q=refugee+friendly&l=San+Diego%2C+CA" target="_blank" rel="noopener noreferrer" class="card" style="text-decoration:none">
-          <div class="card__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <h3>Indeed</h3>
-          <p>Search "refugee-friendly employer" to find companies actively hiring newcomers. Filter by location, type, and salary.</p>
-          <span class="card__link">
-            Search Indeed
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </span>
-        </a>
-        <a href="https://www.linkedin.com/jobs/search/?keywords=san%20diego&location=San%20Diego" target="_blank" rel="noopener noreferrer" class="card" style="text-decoration:none">
-          <div class="card__icon">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </div>
-          <h3>LinkedIn</h3>
-          <p>Professional networking and job search. Many San Diego employers post here and you can connect with HR teams directly.</p>
-          <span class="card__link">
-            Search LinkedIn
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </span>
-        </a>
-        <a href="https://careers.unhcr.org/" target="_blank" rel="noopener noreferrer" class="card" style="text-decoration:none">
-          <div class="card__icon" style="background:rgba(224,123,57,.1);color:var(--amber)">
-            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3>UNHCR Careers</h3>
-          <p>International job opportunities with UNHCR and partner agencies. Particularly useful for those with international humanitarian experience.</p>
-          <span class="card__link" style="color:var(--amber)">
-            Search UNHCR
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Job Listings (Sample) -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">San Diego Listings</span>
-        <h2 class="h-section">Jobs in your <span class="hl">community.</span></h2>
-        <div style="display:flex;align-items:center;gap:var(--s3)">
-          <p class="lead" style="margin-bottom:0">Showing <strong id="job-count">7</strong> listings</p>
-          <span class="sample-badge">Sample Listings</span>
+      <div class="info-box info-box--success">
+        <div class="info-box__icon">✓</div>
+        <div>
+          <div class="info-box__title">You have the right to work in the U.S.</div>
+          <p>As a refugee, you are authorized to work immediately upon arrival. Your I-94 serves as work authorization. You can also apply for an Employment Authorization Document (EAD card) through IRC Legal Services: <a href="tel:6196417510">(619) 641-7510</a>.</p>
         </div>
       </div>
 
-      <!-- Filter Bar -->
-      <div class="filter-bar" role="group" aria-label="Filter jobs by type">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="full-time">Full Time</button>
-        <button class="filter-btn" data-filter="part-time">Part Time</button>
-        <button class="filter-btn" data-filter="remote">Remote</button>
-        <button class="filter-btn" data-filter="training">Training</button>
-      </div>
+      <!-- Jump links -->
+      <nav class="jump-links" aria-label="Section navigation">
+        <a href="#programs" class="jump-link">🎯 Programs</a>
+        <a href="#job-search" class="jump-link">🔍 Job Search</a>
+        <a href="#industries" class="jump-link">🏭 Industries</a>
+        <a href="#credentials" class="jump-link">🎓 Credentials</a>
+        <a href="#rights" class="jump-link">⚖️ Workers' Rights</a>
+      </nav>
 
-      <div class="jobs-grid">
-
-        <!-- Job 1 -->
-        <article class="job-card" data-category="full-time">
-          <span class="sample-badge sample-pin">Sample</span>
-          <div class="job-card__top">
-            <div>
-              <div class="job-card__logo">AMZ</div>
-            </div>
-            <div>
-              <h4>Warehouse Associate</h4>
-              <div class="job-card__co">Amazon Fulfillment — Otay Mesa</div>
-            </div>
-          </div>
-          <div class="job-tags">
-            <span class="tag tag--teal">Full Time</span>
-            <span class="tag tag--default">Entry Level</span>
-            <span class="tag tag--green">Benefits</span>
-          </div>
-          <div class="job-card__foot">
-            <span class="job-card__salary">$18–$22/hr</span>
-            <span class="job-card__loc">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              San Diego, CA
-            </span>
-          </div>
-        </article>
-
-        <!-- Job 2 -->
-        <article class="job-card" data-category="part-time">
-          <span class="sample-badge sample-pin">Sample</span>
-          <div class="job-card__top">
-            <div>
-              <div class="job-card__logo">REST</div>
-            </div>
-            <div>
-              <h4>Restaurant Server</h4>
-              <div class="job-card__co">Various Restaurants — Downtown SD</div>
-            </div>
-          </div>
-          <div class="job-tags">
-            <span class="tag tag--amber">Part Time</span>
-            <span class="tag tag--default">Flexible Hours</span>
-          </div>
-          <div class="job-card__foot">
-            <span class="job-card__salary">$16/hr + tips</span>
-            <span class="job-card__loc">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              San Diego, CA
-            </span>
-          </div>
-        </article>
-
-        <!-- Job 3 -->
-        <article class="job-card" data-category="remote">
-          <span class="sample-badge sample-pin">Sample</span>
-          <div class="job-card__top">
-            <div>
-              <div class="job-card__logo">CS</div>
-            </div>
-            <div>
-              <h4>Customer Service Rep</h4>
-              <div class="job-card__co">TechCo Services — Remote</div>
-            </div>
-          </div>
-          <div class="job-tags">
-            <span class="tag tag--green">Remote</span>
-            <span class="tag tag--teal">Full Time</span>
-            <span class="tag tag--default">Bilingual Preferred</span>
-          </div>
-          <div class="job-card__foot">
-            <span class="job-card__salary">$17–$20/hr</span>
-            <span class="job-card__loc">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              Work From Home
-            </span>
-          </div>
-        </article>
-
-        <!-- Job 4 -->
-        <article class="job-card" data-category="full-time">
-          <span class="sample-badge sample-pin">Sample</span>
-          <div class="job-card__top">
-            <div>
-              <div class="job-card__logo">HLT</div>
-            </div>
-            <div>
-              <h4>Medical Interpreter</h4>
-              <div class="job-card__co">Scripps Health — Multiple Locations</div>
-            </div>
-          </div>
-          <div class="job-tags">
-            <span class="tag tag--teal">Full Time</span>
-            <span class="tag tag--default">Arabic / Spanish</span>
-            <span class="tag tag--green">Benefits</span>
-          </div>
-          <div class="job-card__foot">
-            <span class="job-card__salary">$20–$28/hr</span>
-            <span class="job-card__loc">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              San Diego, CA
-            </span>
-          </div>
-        </article>
-
-        <!-- Job 5 -->
-        <article class="job-card" data-category="training">
-          <span class="sample-badge sample-pin">Sample</span>
-          <div class="job-card__top">
-            <div>
-              <div class="job-card__logo">WFP</div>
-            </div>
-            <div>
-              <h4>IT Certification Program</h4>
-              <div class="job-card__co">Workforce Partnership — Miramar</div>
-            </div>
-          </div>
-          <div class="job-tags">
-            <span class="tag tag--amber">Training</span>
-            <span class="tag tag--default">12 Weeks</span>
-            <span class="tag tag--green">Free</span>
-          </div>
-          <div class="job-card__foot">
-            <span class="job-card__salary">Free Program</span>
-            <span class="job-card__loc">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              San Diego, CA
-            </span>
-          </div>
-        </article>
-
-        <!-- Job 6 -->
-        <article class="job-card" data-category="part-time">
-          <span class="sample-badge sample-pin">Sample</span>
-          <div class="job-card__top">
-            <div>
-              <div class="job-card__logo">GROC</div>
-            </div>
-            <div>
-              <h4>Grocery Clerk</h4>
-              <div class="job-card__co">Ralphs / Vons — City Heights</div>
-            </div>
-          </div>
-          <div class="job-tags">
-            <span class="tag tag--amber">Part Time</span>
-            <span class="tag tag--default">Entry Level</span>
-          </div>
-          <div class="job-card__foot">
-            <span class="job-card__salary">$16.50/hr</span>
-            <span class="job-card__loc">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              San Diego, CA
-            </span>
-          </div>
-        </article>
-
-        <!-- Job 7 -->
-        <article class="job-card" data-category="remote">
-          <span class="sample-badge sample-pin">Sample</span>
-          <div class="job-card__top">
-            <div>
-              <div class="job-card__logo">DATA</div>
-            </div>
-            <div>
-              <h4>Data Entry Specialist</h4>
-              <div class="job-card__co">Various Companies — Remote</div>
-            </div>
-          </div>
-          <div class="job-tags">
-            <span class="tag tag--green">Remote</span>
-            <span class="tag tag--amber">Part Time</span>
-            <span class="tag tag--default">Flexible</span>
-          </div>
-          <div class="job-card__foot">
-            <span class="job-card__salary">$15–$18/hr</span>
-            <span class="job-card__loc">
-              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              Work From Home
-            </span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Career Resources -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="eyebrow">Career Development</span>
-        <h2 class="h-section">Build your <span class="hl">skills.</span></h2>
-        <p class="lead">Free workshops, coaching, and programs designed to help you present your best self to employers.</p>
-      </div>
-      <div class="grid-3 reveal">
-        <div class="career-card">
-          <div class="career-card__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+      <!-- FREE PROGRAMS -->
+      <div class="resource-section" id="programs">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" style="background:rgba(13,115,119,.12);color:var(--teal)" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
           <div>
-            <h4>Resume Writing Workshop</h4>
-            <p>Learn how to translate international experience into a U.S.-style resume. Offered by IRC San Diego — free for refugees.</p>
+            <h2 class="resource-section__title">Free Job Training &amp; Placement Programs</h2>
+            <p class="resource-section__desc">These programs are designed specifically for refugees and immigrants. All are free.</p>
           </div>
         </div>
-        <div class="career-card">
-          <div class="career-card__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>IRC Employment Program</h4><span class="resource-card__type">Refugee Job Placement &amp; VESL</span></div></div>
+            <p class="resource-card__desc">IRC's employment team provides individualized job placement support, resume writing, interview coaching, and job leads. Includes Vocational ESL (VESL) — combining workplace English with job skills. Among the most effective refugee employment programs in San Diego.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg><span>5348 University Ave, San Diego 92105</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
-          <div>
-            <h4>Interview Preparation</h4>
-            <p>Mock interviews, coaching on common questions, and guidance on professional etiquette for U.S. workplace culture.</p>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>County ORES — Office of Refugee Employment Services</h4><span class="resource-card__type">County Employment Services</span></div></div>
+            <p class="resource-card__desc">San Diego County's dedicated refugee employment program. Provides job readiness training, employment authorization assistance, employer connections, and self-sufficiency planning. Works alongside RCA benefits.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 236-6353</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
-        </div>
-        <div class="career-card">
-          <div class="career-card__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>SDWP Connect2Work</h4><span class="resource-card__type">San Diego Workforce Partnership</span></div></div>
+            <p class="resource-card__desc">San Diego Workforce Partnership's Connect2Work program provides free career counseling, job training, resume help, and employer connections. Available to immigrants and refugees. Multiple America's Job Center locations throughout San Diego.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 228-2900</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
-          <div>
-            <h4>Skills Training Programs</h4>
-            <p>Free vocational training in healthcare, IT, construction trades, and culinary arts through Workforce Partnership San Diego.</p>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/></svg></div><div><h4>IRC VESL (Vocational ESL)</h4><span class="resource-card__type">Workplace English + Job Skills</span></div></div>
+            <p class="resource-card__desc">Combines English language instruction with industry-specific vocabulary and job skills. Covers industries like healthcare, hospitality, manufacturing, and retail. Leads directly to job placement for many graduates.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><a href="tel:6196417510">(619) 641-7510</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
-        </div>
-        <div class="career-card">
-          <div class="career-card__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>Catholic Charities Employment Services</h4><span class="resource-card__type">Job Placement &amp; Training</span></div></div>
+            <p class="resource-card__desc">Offers employment counseling, job readiness training, and employer connections for refugees and immigrants. Bilingual staff available. Part of their comprehensive newcomer services program.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 287-9454 ext. 2100</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
-          <div>
-            <h4>Refugee Employer Network</h4>
-            <p>Companies in San Diego that actively participate in refugee hiring programs, with dedicated HR contacts for newcomers.</p>
-          </div>
-        </div>
-        <div class="career-card">
-          <div class="career-card__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <h4>Mentorship Program</h4>
-            <p>Be matched with a professional mentor in your field who can provide career guidance, networking, and support.</p>
-          </div>
-        </div>
-        <div class="career-card">
-          <div class="career-card__icon">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <div>
-            <h4>Credential Recognition Help</h4>
-            <p>Guidance on getting international degrees and certifications recognized in the U.S. — including evaluation services and supplemental courses.</p>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>World Relief San Diego</h4><span class="resource-card__type">Employment &amp; Small Business</span></div></div>
+            <p class="resource-card__desc">Provides employment services and micro-enterprise support for refugees wanting to start small businesses. Covers business plan development, microloans, and business coaching.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg><a href="mailto:socalsandiego@wr.org">socalsandiego@wr.org</a></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
           </div>
         </div>
       </div>
+
+      <!-- JOB SEARCH -->
+      <div class="resource-section" id="job-search">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" style="background:rgba(13,115,119,.12);color:var(--teal)" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div>
+            <h2 class="resource-section__title">Where to Find Jobs</h2>
+            <p class="resource-section__desc">Job boards and employer programs that actively hire refugees and immigrants.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><h4>Refugee-Friendly Employers in San Diego</h4><span class="resource-card__type">Local Employers</span></div></div>
+            <p class="resource-card__desc">San Diego has many employers actively hiring refugees and immigrants. Top industries: healthcare, hospitality, food service, light manufacturing, transportation, and retail. Ask your IRC case manager about the Employer Partnership Program — employers who have committed to hire refugees.</p>
+            <div class="resource-card__foot"><span class="badge badge--new">Ask IRC for current list</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>America's Job Center of California</h4><span class="resource-card__type">Free Workforce Services</span></div></div>
+            <p class="resource-card__desc">State-funded career centers with free computers for job searching, resume printing, and career counselors. Multiple San Diego County locations. Walk-ins welcome. Access to CalJOBS — California's free job board.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 228-2900 — SDWP</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--free">Free</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IN-DEMAND INDUSTRIES -->
+      <div class="resource-section" id="industries">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" style="background:rgba(13,115,119,.12);color:var(--teal)" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/></svg>
+          </div>
+          <div>
+            <h2 class="resource-section__title">In-Demand Industries in San Diego</h2>
+            <p class="resource-section__desc">These fields have strong hiring rates and training programs specifically designed for refugees.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><h4>Healthcare Support</h4><span class="resource-card__type">Certified Nursing Assistant (CNA), Home Health Aide</span></div></div>
+            <p class="resource-card__desc">High demand, good wages, and programs specifically for refugees. CNA certification takes 4–6 weeks and pays $18–$24/hour to start. Training available through SDCCE and community colleges. Bilingual skills are a major advantage.</p>
+            <div class="resource-card__foot"><span class="badge badge--new">$18–$30/hour · High demand</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>Food Service &amp; Hospitality</h4><span class="resource-card__type">Hotels, Restaurants, Catering</span></div></div>
+            <p class="resource-card__desc">San Diego's large tourism industry constantly hires. Hotels, restaurants, and event venues need diverse, multilingual staff. Food handling certification is free from the county. Entry-level positions often lead to advancement.</p>
+            <div class="resource-card__foot"><span class="badge badge--new">$16–$22/hour · Fast hiring</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/></svg></div><div><h4>Transportation &amp; Logistics</h4><span class="resource-card__type">Delivery, Warehousing, Truck Driving</span></div></div>
+            <p class="resource-card__desc">Delivery driving (UPS, Amazon, FedEx) and warehousing jobs have immediate openings. CDL (commercial driver's license) training is available through SDWP with potential wage increases to $60K+/year.</p>
+            <div class="resource-card__foot"><span class="badge badge--new">$18–$35/hour · Immediate openings</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/></svg></div><div><h4>Construction &amp; Skilled Trades</h4><span class="resource-card__type">Carpentry, Electrical, Plumbing</span></div></div>
+            <p class="resource-card__desc">San Diego's housing construction boom creates steady demand. Apprenticeship programs through unions offer paid training. Bilingual workers are especially in demand on job sites. SDWP can connect to apprenticeship programs.</p>
+            <div class="resource-card__foot"><span class="badge badge--new">$22–$45/hour · Apprenticeships available</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREDENTIALS -->
+      <div class="resource-section" id="credentials">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" style="background:rgba(13,115,119,.12);color:var(--teal)" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h2 class="resource-section__title">International Credential Recognition</h2>
+            <p class="resource-section__desc">If you had a profession or degree in your home country, there are pathways to have it recognized in the U.S.</p>
+          </div>
+        </div>
+        <div class="info-box info-box--info">
+          <div class="info-box__icon">ℹ</div>
+          <div>
+            <div class="info-box__title">Your foreign degree still has value</div>
+            <p>Many refugees were doctors, engineers, teachers, or other professionals in their home countries. While U.S. licensure processes take time, there are "bridge programs" and alternative pathways. IRC and Catholic Charities can connect you with credential evaluation services.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/></svg></div><div><h4>Credential Evaluation Services</h4><span class="resource-card__type">Foreign Degree Evaluation</span></div></div>
+            <p class="resource-card__desc">Organizations like World Education Services (WES) and Educational Credential Evaluators (ECE) can evaluate your foreign degree for U.S. equivalency. This is often required for further education or professional licensing. Fees may apply but some nonprofits offer vouchers.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg><span>Ask IRC for current voucher programs</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Fee — vouchers available</span></div>
+          </div>
+          <div class="resource-card">
+            <div class="resource-card__top"><div class="resource-card__icon" aria-hidden="true"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/></svg></div><div><h4>San Diego Community College District</h4><span class="resource-card__type">Accelerated Credential Programs</span></div></div>
+            <p class="resource-card__desc">SDCCD offers fast-track certification programs in healthcare, IT, business, and other fields. If you have a foreign degree, advisors can help you get credit for prior learning and reach U.S. certification faster.</p>
+            <div class="resource-card__contacts">
+              <div class="resource-contact"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2"/></svg><span>(619) 388-6500</span></div>
+            </div>
+            <div class="resource-card__foot"><span class="badge badge--income">Low-cost / free for eligible students</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKERS' RIGHTS -->
+      <div class="resource-section" id="rights">
+        <div class="resource-section__header">
+          <div class="resource-section__icon" style="background:rgba(13,115,119,.12);color:var(--teal)" aria-hidden="true">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h2 class="resource-section__title">Workers' Rights</h2>
+            <p class="resource-section__desc">California has some of the strongest worker protections in the United States. These apply to all workers regardless of immigration status.</p>
+          </div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__header"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> California Worker Protections (2026)</div>
+          <div class="benefit-row"><span>Minimum wage</span><span>$17.00/hour ($20 for fast food) — higher than federal</span></div>
+          <div class="benefit-row"><span>Overtime</span><span>1.5x pay after 8 hours/day or 40 hours/week</span></div>
+          <div class="benefit-row"><span>Paid sick leave</span><span>At least 5 days per year — all workers</span></div>
+          <div class="benefit-row"><span>Workplace safety</span><span>OSHA protections apply to all workers</span></div>
+          <div class="benefit-row"><span>Right to organize</span><span>Legal to join or form a union</span></div>
+          <div class="benefit-row"><span>No retaliation</span><span>Illegal to fire you for reporting violations</span></div>
+        </div>
+        <div class="info-box info-box--warn">
+          <div class="info-box__icon">⚠</div>
+          <div>
+            <div class="info-box__title">If your employer violates your rights</div>
+            <p>Contact the California Labor Commissioner's Office: <a href="tel:18446248217">1-844-624-8217</a>. You can file a complaint anonymously. Employers cannot retaliate against you for reporting a violation, and they cannot ask about your immigration status when you file a wage claim.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -384,56 +279,17 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="brand">
-          <span class="brand__icon" aria-hidden="true">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </span>
-          The Refuge<span class="dot">.</span>
-        </a>
-        <p>Empowering Lives, Bridging Communities. A prototype resource hub for refugees in San Diego.</p>
+        <a href="index.html" class="brand"><span class="brand__icon" aria-hidden="true"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>The Refuge<span class="dot">.</span></a>
+        <p>Empowering Lives, Bridging Communities. A free resource hub for refugees in San Diego.</p>
       </div>
-      <div class="footer-col">
-        <h5>Pages</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="employment.html">Employment</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="sources.html">Sources</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Resources</h5>
-        <ul>
-          <li><a href="resources.html#emergency">Emergency Help</a></li>
-          <li><a href="resources.html#housing">Housing</a></li>
-          <li><a href="resources.html#legal">Legal Aid</a></li>
-          <li><a href="resources.html#healthcare">Healthcare</a></li>
-          <li><a href="resources.html#education">Education</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Languages</h5>
-        <ul>
-          <li>English</li>
-          <li>العربية</li>
-          <li>Español</li>
-          <li>Français</li>
-          <li>دری (Dari)</li>
-          <li>پښتو (Pashto)</li>
-        </ul>
-      </div>
+      <div class="footer-col"><h5>Pages</h5><ul><li><a href="index.html">Home</a></li><li><a href="first-steps.html">First Steps</a></li><li><a href="resources.html">Resources</a></li><li><a href="benefits.html">Benefits</a></li><li><a href="employment.html">Employment</a></li><li><a href="community.html">Community</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Employment</h5><ul><li><a href="#programs">Programs</a></li><li><a href="#job-search">Job Search</a></li><li><a href="#industries">Industries</a></li><li><a href="#credentials">Credentials</a></li><li><a href="#rights">Workers' Rights</a></li></ul></div>
+      <div class="footer-col"><h5>Languages</h5><ul><li>English</li><li>العربية</li><li>Español</li><li>Français</li><li>دری (Dari)</li><li>پښتو (Pashto)</li></ul></div>
     </div>
-    <div class="footer-bg-word" aria-hidden="true">REFUGE</div>
-    <div class="footer-bottom">
-      <span>Built by Armaghan Zarak · San Diego, CA · HBS Project · Prototype Site</span>
-      <span>© 2026 The Refuge</span>
-    </div>
+    <div class="footer-bg-word" aria-hidden="true">EMPLOYMENT</div>
+    <div class="footer-bottom"><span>Built by Armaghan Zarak · San Diego, CA</span><span>© 2026 The Refuge</span></div>
   </div>
 </footer>
-
 <script src="main.js"></script>
 </body>
 </html>
