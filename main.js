@@ -579,7 +579,7 @@ var Chatbot = (function() {
     var input    = document.getElementById('chat-input');
     var chips    = document.getElementById('chat-chips');
 
-    appendMsg(messages, '👋 Hello! I\'m here to help you find resources in San Diego.<br><br>Ask me about <strong>housing, healthcare, legal aid, food, employment, ESL classes</strong>, or anything else you need. What can I help you with today?', 'bot');
+    appendMsg(messages, '👋 Hello! I\'m here to help you find resources in San Diego.<br><br>Ask me about <strong>housing, healthcare, legal aid, food, employment, ESL classes</strong>, or anything else you need. What can I help you with today?<br><br><em style="font-size:.85em;color:#666">⚠️ This AI helper may make mistakes. Confirm important info directly with the organization.</em>', 'bot');
 
     CHIPS.forEach(function(text) {
       var btn = document.createElement('button');
